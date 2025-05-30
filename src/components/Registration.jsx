@@ -17,6 +17,7 @@ const Registration = ({ isFormDisabled }) => {
     try {
       const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/register`, formData);
       setMessage(res.data.message);
+      setFormData({ name: '', email: '' }); // Clear form on success
     } catch (err) {
       setMessage(err.response?.data?.message || 'Submission failed');
     }
@@ -34,6 +35,7 @@ const Registration = ({ isFormDisabled }) => {
         whileFocus={{ scale: 1.02 }}
         type="text"
         name="name"
+        value={formData.name}
         disabled={isFormDisabled}
         placeholder="Your Name"
         onChange={handleChange}
@@ -46,6 +48,7 @@ const Registration = ({ isFormDisabled }) => {
         whileFocus={{ scale: 1.02 }}
         type="email"
         name="email"
+        value={formData.email}
         disabled={isFormDisabled}
         placeholder="Your Email"
         onChange={handleChange}
@@ -75,7 +78,7 @@ const Registration = ({ isFormDisabled }) => {
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.3 }}
             className={`text-sm mt-2 text-center font-medium ${
-              isFormDisabled ? 'text-red-500' : 'text-green-400'
+              message.includes('successful') ? 'text-green-400' : 'text-red-500'
             }`}
           >
             {message}
