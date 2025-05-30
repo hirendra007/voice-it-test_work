@@ -14,9 +14,9 @@ dist-ssr
 
 # Env files
 *.local
-.env
+
 .env.* 
-server/.env 
+
 
 # Editor-specific stuff
 .vscode/*
@@ -28,3 +28,4 @@ server/.env
 *.njsproj
 *.sln
 *.sw?
+.env
