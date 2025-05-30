@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Countdown from './components/countdown';
+import Countdown from './components/Countdown';
 import RegistrationForm from './components/Registration';
 import { motion } from 'framer-motion';
 
