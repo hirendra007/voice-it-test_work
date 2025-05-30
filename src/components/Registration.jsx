@@ -15,7 +15,7 @@ const Registration = ({ isFormDisabled }) => {
     setMessage('');
 
     try {
-      const res = await axios.post('http://localhost:5000/api/register', formData);
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/register`, formData);
       setMessage(res.data.message);
     } catch (err) {
       setMessage(err.response?.data?.message || 'Submission failed');
