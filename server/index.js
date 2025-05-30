@@ -13,8 +13,8 @@ app.use(express.json());
 // Connect to MongoDB
 mongoose
   .connect(process.env.MONGODB)
-  .then(() => console.log('✅ MongoDB connected'))
-  .catch((err) => console.error('❌ MongoDB connection error:', err));
+  .then(() => console.log('MongoDB connected'))
+  .catch((err) => console.error(err));
 
 // Mongoose Schema
 const registrationSchema = new mongoose.Schema({
@@ -48,4 +48,4 @@ app.post(
 
 // Start Server
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`🚀 Server running on http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
