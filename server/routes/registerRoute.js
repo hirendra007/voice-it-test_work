@@ -17,7 +17,7 @@ router.post(
 
     try {
       const { name, email } = req.body;
-      await Registration.create({ name, email });
+      await Registration.create({ name, email });   
       res.status(200).json({ message: 'Registration successful' });
     } catch (err) {
       res.status(500).json({ message: 'Server error' });
