@@ -8,7 +8,7 @@ const App = () => {
   const eventDate = '2025-06-15T18:00:00';
 
   return (
-    <div className="p-6 min-h-screen bg-black text-center flex items-center justify-center font-mono text-white" >
+    <div className="p-6 min-h-screen bg-black text-center flex items-center justify-center font-normal text-white" >
     <motion.div
       className="fixed inset-0 "
       initial={{ opacity: 0, y: 1000 }}
@@ -22,7 +22,7 @@ const App = () => {
       </motion.div>
       <div className="absolute">
         <motion.h2
-          className="text-3xl font-extrabold mb-2 text-indigo-400"
+          className="text-3xl font-extrabold mb-2 uppercase text-indigo-500"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}

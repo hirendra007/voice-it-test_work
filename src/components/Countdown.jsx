@@ -80,7 +80,7 @@ const Countdown = ({ targetDate, onExpire }) => {
               transition={{ duration: 0.3 }}
               className="inline-block"
             >
-              <span className="text-blue-400">{String(value).padStart(2, '0')}</span>
+              <span className="text-indigo-400">{String(value).padStart(2, '0')}</span>
               <span className="text-sm ml-1 uppercase text-gray-400">{unit}</span>
             </motion.span>
           ))}

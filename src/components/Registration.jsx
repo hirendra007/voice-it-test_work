@@ -39,7 +39,7 @@ const Registration = ({ isFormDisabled }) => {
         disabled={isFormDisabled}
         placeholder="Your Name"
         onChange={handleChange}
-        className={`bg-zinc-800 border border-zinc-600 rounded px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-200 ${
+        className={`bg-zinc-800 border border-zinc-600 rounded px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-indigo-100 transition duration-200 ${
           isFormDisabled ? 'opacity-30' : 'opacity-100'
         }`}
       />
@@ -52,7 +52,7 @@ const Registration = ({ isFormDisabled }) => {
         disabled={isFormDisabled}
         placeholder="Your Email"
         onChange={handleChange}
-        className={`bg-zinc-800 border border-zinc-600 rounded px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-200 ${
+        className={`bg-zinc-800 border border-zinc-600 rounded px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-indigo-100 transition duration-200 ${
           isFormDisabled ? 'opacity-30' : 'opacity-100'
         }`}
       />
@@ -62,8 +62,8 @@ const Registration = ({ isFormDisabled }) => {
         whileTap={!isFormDisabled && { scale: 0.95 }}
         type="submit"
         disabled={isFormDisabled}
-        className={`w-full py-2 rounded font-medium bg-blue-600 text-white transition ${
-          isFormDisabled ? 'opacity-50 cursor-not-allowed' : 'hover:bg-blue-700'
+        className={`w-full py-2 rounded font-medium bg-indigo-800 text-white transition duration-300 ${
+          isFormDisabled ? 'opacity-50 cursor-not-allowed' : 'hover:bg-indigo-900'
         }`}
       >
         Submit
