@@ -5,5 +5,5 @@ const registrationSchema = new mongoose.Schema({
   email: { type: String, required: true },
 }, { timestamps: true });
 
-const Registration = mongoose.model('Registration', registrationSchema);
+const Registration = mongoose.models.Registration || mongoose.model('Registration', registrationSchema);
 export default Registration;

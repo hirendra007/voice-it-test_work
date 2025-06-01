@@ -3,7 +3,6 @@ import { body, validationResult } from 'express-validator';
 import Registration from '../models/Registration.js';
 
 const router = express.Router();
-
 router.post(
   '/',
   [
@@ -17,9 +16,14 @@ router.post(
 
     try {
       const { name, email } = req.body;
-      await Registration.create({ name, email });   
+
+      console.log('Received registration request:', { name, email });
+
+      await Registration.create({ name, email });
+
       res.status(200).json({ message: 'Registration successful' });
     } catch (err) {
+      console.error('Registration error:', err);
       res.status(500).json({ message: 'Server error' });
     }
   }
