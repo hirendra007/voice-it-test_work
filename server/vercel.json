@@ -8,6 +8,17 @@
   ],
   "routes": [
     {
+      "src": "/api/(.*)",   
+      "dest": "/index.js"
+    },
+    {
+      "src": "/favicon.ico",      
+      "headers": {
+        "Cache-Control": "max-age=86400"
+      },
+      "status": 204
+    },
+    {
       "src": "/(.*)",
       "dest": "/index.js"
     }
